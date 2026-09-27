@@ -1,0 +1,5 @@
+docker run -d -p 3306:3306 -v mysql-data:/var/lib/mysql --network=my-network -e MYSQL_ROOT_PASSWORD=Test@123 -e MYSQL_DATABASE=bankappdp mysql
+
+docker build -t aibankapp:v1 .
+
+docker run -d -p 8080:8080 --network=my-network
